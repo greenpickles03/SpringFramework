@@ -10,4 +10,5 @@ public interface UserService {
 
     Map<String, Object> saveUser(UserDTO userDTO);
     List<User> getAllUser();
+    List<User> findByUsernameAndPassword(UserDTO userDTO);
 }

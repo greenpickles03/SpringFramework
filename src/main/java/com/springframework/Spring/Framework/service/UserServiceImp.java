@@ -52,4 +52,9 @@ public class UserServiceImp implements UserService{
     public List<User> getAllUser() {
         return userRepository.findAll().stream().toList();
     }
+
+    @Override
+    public List<User> findByUsernameAndPassword(UserDTO userDTO) {
+        return userRepository.findByUsernameAndPassword(userDTO.getUsername(), userDTO.getPassword());
+    }
 }

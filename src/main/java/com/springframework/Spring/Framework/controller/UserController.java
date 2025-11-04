@@ -26,4 +26,9 @@ public class UserController {
         return userService.getAllUser();
     }
 
+    @PostMapping("/findByUsernameAndPassword")
+    public List<User> findByUsernameAndPassword(@RequestBody UserDTO userDTO) {
+        return userService.findByUsernameAndPassword(userDTO);
+    }
+
 }
