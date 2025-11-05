@@ -24,6 +24,7 @@ for Spring-based applications.
 
 7. Dependency Injection (DI): Spring's DI mechanism allows for loose coupling between components, promoting better
 modularity and testability.
+Dependency Injection means giving an object its dependencies rather than letting it create them.
 
 Overall, Spring Framework is a versatile and widely-used framework that simplifies Java application development,
 promoting best practices and improving productivity.
