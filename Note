@@ -76,6 +76,12 @@ Benefits of AOP:
 2. Reusability: Aspects can be reused across different parts of an application or even across different applications.
 3. Improved Maintainability: Changes to cross-cutting concerns can be made in one place, reducing the risk of introducing bugs.
 
+//@Component
+In Spring Framework, the @Component annotation is used to indicate that a class is a Spring-managed
+component. It is a generic stereotype annotation that can be applied to any class to indicate that it should be
+automatically detected and registered as a Spring bean during component scanning. This allows Spring to manage the
+lifecycle of the component, including dependency injection and configuration.
+
 //@RestController
 In Spring Framework, the @RestController annotation is a specialized version of the @Controller annotation that is used
 to create RESTful web services. It combines the functionality of @Controller and @ResponseBody, allowing
