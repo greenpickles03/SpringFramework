@@ -13,8 +13,11 @@ import java.util.Map;
 @RequestMapping("/api/v1/users")
 public class UserController {
 
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @PostMapping("/saveUser")
     public Map<String, Object> saveUser(@RequestBody UserDTO userDTO) {

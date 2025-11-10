@@ -107,6 +107,28 @@ In Spring Framework, the @PostMapping annotation is a specialized version of the
 that is used to map HTTP POST requests to specific handler methods in a controller class. It provides a convenient way to handle POST requests
 without having to specify the HTTP method explicitly.
 
+//@SpringBootApplication
+In Spring Boot, the @SpringBootApplication annotation is a convenience annotation that combines three important
+annotations: @Configuration, @EnableAutoConfiguration, and @ComponentScan. It is typically placed on the main application class
+to enable auto-configuration, component scanning, and to define configuration settings for the Spring Boot application.
+
+//@Configuration
+In Spring Framework, the @Configuration annotation is used to indicate that a class contains bean definitions
+and configuration settings for the Spring application context. Classes annotated with @Configuration are processed
+by the Spring container to generate and manage beans, allowing developers to define application components and their dependencies
+using Java code instead of XML configuration files.
+
+@EnableAutoConfiguration
+In Spring Boot, the @EnableAutoConfiguration annotation is used to enable the auto-configuration feature of Spring Boot.
+When this annotation is present on a configuration class, Spring Boot automatically configures the application based on the
+dependencies present in the classpath. This reduces the need for manual configuration and allows developers to quickly set up
+Spring applications with sensible defaults.
+
+@ComponentScan
+In Spring Framework, the @ComponentScan annotation is used to specify the base packages to scan for Spring-managed components,
+such as @Component, @Service, @Repository, and @Controller annotated classes. It enables automatic detection and registration of these components
+as Spring beans in the application context, facilitating dependency injection and configuration.
+
 //@PutMapping
 In Spring Framework, the @PutMapping annotation is a specialized version of the @RequestMapping annotation
 that is used to map HTTP PUT requests to specific handler methods in a controller class. It provides a convenient way to handle PUT requests
@@ -205,7 +227,8 @@ Overall, Spring Security is a comprehensive security framework that helps develo
 robust authentication and authorization features.
 
 //Spring MVC
-Spring MVC (Model-View-Controller) is a web framework within the Spring Framework that follows the MVC architectural pattern. It is designed to simplify the development of web applications by separating
+Spring MVC (Model-View-Controller) is a web framework within the Spring Framework that follows the MVC architectural pattern.
+It is designed to simplify the development of web applications by separating
 the application into three main components: Model, View, and Controller.
 Key features of Spring MVC include:
 1. DispatcherServlet: The core component of Spring MVC that handles incoming HTTP requests and routes them to the appropriate controller methods.
@@ -217,4 +240,18 @@ Key features of Spring MVC include:
 Overall, Spring MVC is a powerful and flexible framework for building web applications in Java, promoting best practices and
 improving developer productivity.
 
+//Inversion of Control (IoC)
+Inversion of Control (IoC) is a design principle in software engineering where the control of object creation and management is
+inverted from the traditional approach. Instead of a class being responsible for creating and managing its dependencies,
+an external entity (often a framework or container) takes on that responsibility. This leads to a more modular and flexible architecture,
+as components are decoupled from their dependencies.
+
+IoC is often implemented through Dependency Injection (DI), where dependencies are provided to a class rather than
+the class creating them itself. This allows for easier testing, as dependencies can be mocked or stubbed, and promotes better separation of concerns.
+Benefits of Inversion of Control:
+1. Loose Coupling: Components are less dependent on each other, making it easier to change or replace them without affecting other parts of the system.
+2. Improved Testability: Dependencies can be easily mocked or stubbed during unit testing, allowing for isolated testing of components.
+3. Enhanced Maintainability: Changes to dependencies can be made in one place, reducing the risk of introducing bugs.
+4. Reusability: Components can be reused in different contexts with different dependencies.
+Overall, Inversion of Control is a fundamental principle that promotes better software design and architecture by decoupling components and improving code quality.
 
